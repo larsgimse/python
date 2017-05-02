@@ -9,11 +9,7 @@
 import time
 from time import sleep
 from TwitterAPI import TwitterAPI
-import struct
-import os
 from serial import Serial
-import httplib
-from httplib import IncompleteRead
 import random
 from random import randint
 
@@ -24,7 +20,6 @@ microbitBaud = '115200' # Baud for serial communication
 microbitWaitTime = 1 # The length of time Python wait before attemping to issue commands to the micro:bit
 stringToTrack = "#romforlek" # Change this to the search term you wish to track from Twitter
 servoTime= 10
-vinkel = 73
 
 from auth_romforlek import (
     consumer_key,
@@ -39,12 +34,8 @@ servoAngle = ('0',
               '135',
               '180')
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
 print "Initialising Twitter Stream Application"
-
 print "Initialisation OK!"
-
 print 'Initialising micro:bit Board through Serial'
 
 
@@ -76,7 +67,7 @@ else:
 
     for item in r.get_iterator():
       if 'text' in item:
-        print item['user']['screen_name'].encode('utf-8') + ' tweeted: ' + item['text'].encode('utf-8')# Print screen name and the tweet text
+        print item['user']['screen_name'].encode('utf-8') + ' tweeted: ' + item['text'].encode('utf-8')
         tweet = item['text'].encode('utf-8')
         print tweet.split()
         if '#servo0' in tweet.split():
