@@ -55,19 +55,13 @@ sleep(microbitWaitTime)
 
 if testSerial:
   for x in range(0,10):
-#  print "Send to micro:bit"
     angleSet = random.choice(servoAngle)
     ser.write(angleSet)
-#  print random.choice(servoAngle)
-#    sleep(randint(0.1,5))
     sleep(1)
     print(x)
     print(angleSet)
     print '----'
     (x)
-#  ser.write(random.choice(servoAngle))
-#  print random.choice(servoAngle)
-#  sleep(random.choice(servoTime2)
 
 else:
   print "Initialisation OK!"
@@ -106,11 +100,6 @@ else:
                 ser.write('135')
                 sleep(servoTime)
         elif '#servoplay' in tweet.split():
-#                servoAngle = tweet.split('#servo')
-#                servoAngle2 = servoAngle[1]
-#                print servoAngle2
-#                ser.write(servoAngle2)
-#                sleep(servoTime)
           for x in range(0,10):
             angleSet = random.choice(servoAngle)
             ser.write(angleSet)
@@ -121,9 +110,7 @@ else:
             (x)
                 
   except IncompleteRead:
-    # Oh well, reconnect and keep trucking
     print "IncompleteRead occurred"
   except KeyboardInterrupt:
-    # Or however you want to exit this loop
     api.disconnect()
     exit()
