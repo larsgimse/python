@@ -1,4 +1,5 @@
 Some code to find out how to use TwitterAPI and locations filter.
+https://github.com/geduldig/TwitterAPI
 
 <pre>
 r = api.request('statuses/filter', {'locations':'-74,40,-73,41'}) #NYC 
