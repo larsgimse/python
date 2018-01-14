@@ -18,4 +18,4 @@ Oslo: api.request('statuses/filter', {'locations':'10.577063,59.831563,10.90116,
 
 Python code: https://github.com/larsgimse/python/blob/master/twitter/twitter_oslo.py
 
-#next - make e-textils with activity o-meter from locations
+# next - make e-textils with activity o-meter from locations
