@@ -1,2 +1,2 @@
-#python code taling to micro:bit
+# python code talking to micro:bit
 
